@@ -1,4 +1,4 @@
-use {frame, ConnectionError, StreamId};
+use {frame, ConnectionError, Reason, StreamId};
 use {Body, Chunk};
 use proto::{self, Connection};
 use error::Reason::*;
@@ -158,6 +158,10 @@ impl<B: IntoBuf> Stream<B> {
     /// notified when the window size is *increased*.
     pub fn window_size(&mut self) -> usize {
         self.inner.window_size()
+    }
+
+    pub fn send_reset(&mut self, reason: Reason) -> Result<(), ConnectionError> {
+        unimplemented!()
     }
 
     pub fn send_response(&mut self, response: Response<()>, end_of_stream: bool)
