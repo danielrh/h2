@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Frame","An H2 connection frame"]],"mod":[["client",""],["error",""],["server",""]],"struct":[["Body",""],["Chunk",""],["StreamId",""]],"type":[["FrameSize",""],["HeaderMap",""]]});
